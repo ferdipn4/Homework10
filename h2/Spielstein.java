@@ -60,7 +60,7 @@ public class Spielstein {
             for (int i = 0; i < n; i++) {
                 Feld feld = feldArray[currentRow][currentCol];
                 if (feld.isBoese()) {
-                    // Bleibt stehen, wenn boese
+                    
                     break;
                 }
                 char dir = feld.getDirection();
@@ -80,15 +80,15 @@ public class Spielstein {
                         newCol = currentCol + 1;
                         break;
                     default:
-                        // Ungültige Richtung, bleibt stehen
+                        
                         break;
                 }
-                // Prüfen, ob neue Position gültig ist
+                
                 if (newRow >= 0 && newRow < dim && newCol >= 0 && newCol < dim) {
                     currentRow = newRow;
                     currentCol = newCol;
                 } else {
-                    // Wenn außerhalb des Bretts, bleibt stehen
+                    
                     break;
                 }
             }
